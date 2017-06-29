@@ -1,0 +1,49 @@
+#burgerPic {
+    height: 200px;
+    width: 300px;
+    /*display: block;
+    margin: auto;
+    text-align: center;*/
+}
+
+body {
+    background: orange;
+    color: red;
+}
+
+/*.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  align-items: center;
+  width: 100%;
+}*/
+
+.panel {
+    width: 100%;
+   
+    margin-top: 20px;
+    font-size: 14px;
+}
+.panel-header {
+    text-align: center;
+    font-size: 20px;
+   padding-top: 10px;
+   color: blue;
+   text-decoration: underline;
+}
+.panel-body {
+    font-size: 15px;
+}
+
+#newBurger {
+    width: 100%;
+}
+
+#btnAddBurger {
+    display: block;
+    margin: auto;
+}
+
+.add-panel {
+    text-decoration: none;
+}

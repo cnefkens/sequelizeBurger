@@ -1,0 +1,78 @@
+<div class='container'>
+<h1 align='center'>Eat-Da-Burger!</h1>
+<div class='row'>
+    
+       <img src="assets/img/burger_vector_266368.jpg" class="img-responsive center-block" id="burgerPic">
+</div>
+
+<div class='row'>
+    <div class='col-md-1'></div>
+    <div class='col-md-5'>
+        <div class='panel'>
+         <div class="panel-header">   
+        Burgers Ready to be Devoured
+        </div>
+       <div class='panel-body'>
+        <ul class="list-group">
+            {{#each burgers}}
+                 {{#unless this.devoured}}
+                    <li class="list-group-item">
+                    <div class='input-group'>
+                     <p class="lead">{{this.burger_name}}</p>
+                     <span class="input-group-btn">
+                        <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="true">
+                        <button class="btn btn-default btn-md" type="submit" style="background: green; color: white">Devour Me!</button>
+                        </form>
+                     </span>
+                    </div>
+                    </li>
+                {{/unless}}
+            {{/each}}
+        </ul>
+        </div>
+    </div>
+    </div>
+    <div class='col-md-1'></div>
+    <div class='col-md-5'>
+         <div class='panel'>
+         <div class="panel-header">   
+        Devoured Burgers
+        </div>
+       <div class='panel-body'>
+        <ul class="list-group">
+            {{#each burgers}}
+                 {{#if this.devoured}}
+                    <li class="list-group-item">
+                    <div class='input-group'>
+                     <p class="lead">{{this.burger_name}}</p>
+                    </div>
+                    </li>
+                {{/if}}
+            {{/each}}
+        </ul>
+        </div>
+    </div>
+    </div>
+</div>  
+
+<div class='row'>
+    <div class='col-md-3'></div>
+    <div class="col-md-6">
+        <div class='panel'>
+        <div class='panel-header add-panel'>    
+            Enter a burger you want to eat and click the "Add Burger" button.
+        </div>
+        <div class="panel-body">
+        <form class="create-update-form" action="/" method="POST">
+
+        <div class="form-group">
+            <label for="newBurger">Burger Name:</label>
+            <input type="text" id="newBurger" name="name">
+        </div>
+         <button class="btn btn-default btn-md" type="submit" style="background: green; color: white" id="btnAddBurger">Add Burger</button>
+        </form>
+    </div> 
+    </div>
+</div> 
+</div>
