@@ -1,22 +1,18 @@
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references our connection to the DB.
-var connection = require("../config/connection.js");
-
+module.exports = function(sequelize, DataTypes) {
+  var burgers = sequelize.define("burgers", {
 // Creates a "Chirp" model that matches up with DB
-var burger = connection.define("burgers", {
   burger_name: {
-    type: Sequelize.STRING
+    type: DataTypes.STRING,
+    allowNull: false,
   },
     devoured: {
-    type: Sequelize.BOOLEAN
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
   }},
 {
   timestamps: false
 });
 
 // Syncs with DB
-burger.sync();
-
-
-// Export the database functions for the controller (catsController.js).
-module.exports = burger;
+ return burgers;
+};
