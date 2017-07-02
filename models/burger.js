@@ -8,11 +8,17 @@ module.exports = function(sequelize, DataTypes) {
     devoured: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
-  }},
-{
-  timestamps: false
-});
+  }});
 
+burgers.associate = function(models) {
+    // Using additional options like CASCADE etc for demonstration
+    // Can also simply do Task.belongsTo(models.User);
+    burgers.belongsTo(models.customers, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  }
 // Syncs with DB
  return burgers;
 };

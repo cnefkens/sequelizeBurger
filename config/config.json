@@ -3,7 +3,7 @@
     "username": "customer",
     "password": "P@55w0rd",
     "database": "burger_db",
-    "host": "127.0.0.1",
+    "host": "L5-HEALTH-HP8",
     "dialect": "mysql"
   },
   "test": {

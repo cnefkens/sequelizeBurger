@@ -11,12 +11,6 @@ body {
     color: red;
 }
 
-/*.vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
-  align-items: center;
-  width: 100%;
-}*/
 
 .panel {
     width: 100%;
@@ -37,6 +31,12 @@ body {
 
 #newBurger {
     width: 100%;
+    height: 30px;
+    font-size: 15px;
+}
+
+#newBurgerLabel {
+    font-size: 18px;
 }
 
 #btnAddBurger {
@@ -46,4 +46,29 @@ body {
 
 .add-panel {
     text-decoration: none;
+}
+
+#customer_name {
+    width: 100px;
+    height: 30px;
+}
+
+#devouredBy {
+    font-size: 14px;
+}
+
+#devouredForm, #devouredSpan {
+    border: none;
+    background: none;
+
+}
+
+.input-group-addon, #devouredAddon {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
